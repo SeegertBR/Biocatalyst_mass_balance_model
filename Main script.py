@@ -9,15 +9,11 @@ from Crazy_long_sensitivity import SALib
 
 from plotfunc import plot,plot_biotransformation_yield, plot_specific_productivity, plot_by_percent, plot_acetate, plot_precursor_DDIBOA, plot_simulation,plot_substrate_and_biomass, plot_biomass_only, plot_product_per_biomass, plot_rates 
 
-
-
-
 import warnings
-import time
+
 
 
 #Only uncomment what you want to run. THe console and plots gets really crowded otherwise.
-start_time = time.time()
 warnings.filterwarnings("ignore", message="differential_evolution: the 'workers' keyword has overridden updating='immediate'")
 
 # need a model to take the parameters from 
@@ -48,7 +44,7 @@ t, C = model.solve()
 
 
 #Sensitivity_and_uncertainty
-sensitivity_and_uncertainty(model)
+#sensitivity_and_uncertainty(model)
 #montecarloplots(model)
 #SALib(model)
 
@@ -61,7 +57,3 @@ if __name__ == "__main__":
     print("Done")
     
 
-
-end_time = time.time()
-
-tt = (end_time - start_time)/60
